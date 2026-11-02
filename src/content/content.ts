@@ -67,7 +67,6 @@ export const defaultContent: ExperienceContent = {
     label: 'CHAPTER 03 — THANK YOU & SORRY',
     heading: 'Makasih ya, udah pernah ada di hidup aku.',
     paragraphs: [
-      'Makasih yaa, sudah pernah ada dalam hidupku.',
       'Makasih sudah pernah hadir dan menjadi bagian dari hidupku sejak 2023. Makasih buat waktu, cerita, kebahagiaan, kasih sayang, dan hal-hal sederhana yang pernah kita lewati bersama.',
       'Makasih juga sudah mengajari aku banyak hal. Kamu laki-laki terbaik yang pernah aku temui.',
       'Aku tahu perjalanan kamu nggak mudah. Banyak luka, trauma, dan tangis yang pernah kamu lewati. Aku bangga sama semua usaha kamu, aku bangga sama semua pencapaian kamu.',
@@ -83,7 +82,6 @@ export const defaultContent: ExperienceContent = {
       'Semoga kamu selalu dikelilingi orang-orang yang benar-benar tulus sayang sama kamu, dan selalu bahagia bersama siapa pun kamu nantinya.',
       'Selamat ulang tahun yaa. Semoga kamu selalu baik-baik aja.',
 
-      'I love you, and I never stop loving youu.'
 ],
     final: 'I love you, and I never stop loving you.',
   },
