@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Play, Film, AlertCircle } from 'lucide-react'
@@ -15,48 +16,63 @@ interface VideoMemoryProps {
 export const VideoMemory: React.FC<VideoMemoryProps> = ({ item, order }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
   const { audioRef, duckVolume, restoreVolume } = useMusic()
+
   const duckedForVideoRef = useRef(false)
-  const [status, setStatus] = useState<VideoStatus>(item.src ? 'idle' : 'missing')
+
+  const [status, setStatus] = useState<VideoStatus>(
+    item.src ? 'idle' : 'missing'
+  )
   const [started, setStarted] = useState(false)
   const [playing, setPlaying] = useState(false)
 
   useEffect(() => {
+    const video = videoRef.current
+
     setStatus(item.src ? 'idle' : 'missing')
     setStarted(false)
     setPlaying(false)
-  }, [item.src])
 
-  useEffect(() => {
-    return () => {
-      if (!duckedForVideoRef.current) return
-      duckedForVideoRef.current = false
-      restoreVolume()
+    if (video && item.src) {
+      video.pause()
+      video.load()
     }
-  }, [restoreVolume])
+
+    return () => {
+      if (duckedForVideoRef.current) {
+        duckedForVideoRef.current = false
+        restoreVolume()
+      }
+    }
+  }, [item.src, restoreVolume])
 
   const duckMusicForVideo = () => {
     const audio = audioRef.current
+
     if (!audio || audio.paused || duckedForVideoRef.current) return
+
     duckVolume()
     duckedForVideoRef.current = true
   }
 
   const restoreMusicAfterVideo = () => {
     if (!duckedForVideoRef.current) return
+
     duckedForVideoRef.current = false
     restoreVolume()
   }
 
   const handlePlay = async () => {
     const video = videoRef.current
-    if (!video || status === 'error' || status === 'missing') return
+
+    if (!video || status !== 'ready') return
 
     try {
       await video.play()
-      setStarted(true)
-      setPlaying(true)
-    } catch {
+    } catch (error) {
+      console.error('Video playback failed:', error)
       setStatus('error')
+      setPlaying(false)
+      restoreMusicAfterVideo()
     }
   }
 
@@ -83,11 +99,15 @@ export const VideoMemory: React.FC<VideoMemoryProps> = ({ item, order }) => {
               className="video-frame__video"
               src={item.src}
               poster={item.poster || undefined}
-              preload="metadata"
+              preload="auto"
               playsInline
               controls={started}
-              onLoadedMetadata={() => setStatus('ready')}
-              onError={() => setStatus('error')}
+              onCanPlay={() => setStatus('ready')}
+              onError={() => {
+                setStatus('error')
+                setPlaying(false)
+                restoreMusicAfterVideo()
+              }}
               onPlay={() => {
                 setStarted(true)
                 setPlaying(true)
@@ -107,16 +127,25 @@ export const VideoMemory: React.FC<VideoMemoryProps> = ({ item, order }) => {
           {unavailable ? (
             <div className="video-placeholder" role="status">
               <span className="video-placeholder__icon" aria-hidden="true">
-                {status === 'error' ? <AlertCircle size={20} /> : <Film size={20} />}
+                {status === 'error' ? (
+                  <AlertCircle size={20} />
+                ) : (
+                  <Film size={20} />
+                )}
               </span>
+
               <span className="video-placeholder__slot">{item.label}</span>
+
               <strong>
-                {status === 'error' ? 'This video could not be loaded.' : 'YOUR VIDEO GOES HERE'}
+                {status === 'error'
+                  ? 'This video could not be loaded.'
+                  : 'YOUR VIDEO GOES HERE'}
               </strong>
+
               <span className="video-placeholder__detail">
                 {status === 'error'
                   ? item.src
-                  : `Add the file at ${item.src || 'public/videos/'} and it will appear here.`}
+                  : `Add the file at ${item.src || 'public/videos/'}`}
               </span>
             </div>
           ) : null}
@@ -126,11 +155,12 @@ export const VideoMemory: React.FC<VideoMemoryProps> = ({ item, order }) => {
               type="button"
               className="video-play"
               onClick={handlePlay}
+              disabled={status !== 'ready'}
               aria-label={`Play ${item.title}`}
             >
               <span className="video-play__ring" aria-hidden="true" />
               <Play size={20} strokeWidth={1.5} />
-              <span>Play</span>
+              <span>{status === 'ready' ? 'Play' : 'Loading...'}</span>
             </button>
           ) : null}
 
@@ -145,7 +175,11 @@ export const VideoMemory: React.FC<VideoMemoryProps> = ({ item, order }) => {
         <div className="video-template__copy">
           <h3 className="video-template__title">{item.title}</h3>
           <p className="video-template__description">{item.description}</p>
-          {item.caption ? <p className="video-template__caption">{item.caption}</p> : null}
+
+          {item.caption ? (
+            <p className="video-template__caption">{item.caption}</p>
+          ) : null}
+
           {unavailable ? (
             <p className="video-template__hint">
               Video slot ready. Add your file in <code>public/videos/</code>.

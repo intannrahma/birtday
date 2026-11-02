@@ -46,7 +46,6 @@ export const MusicProvider: React.FC<MusicProviderProps> = ({
   const [started, setStarted] = useState(false)
   const [unavailable, setUnavailable] = useState(false)
 
-  // Mengatur perubahan volume secara perlahan
   const fadeAudio = useCallback(
     (audio: HTMLAudioElement, target: number, duration = 1400) => {
       if (fadeFrameRef.current !== null) {
@@ -95,7 +94,6 @@ export const MusicProvider: React.FC<MusicProviderProps> = ({
     }
   }, [])
 
-  // Musik mengecil perlahan ketika video diputar
   const duckVolume = useCallback(() => {
     const audio = audioRef.current
 
@@ -109,7 +107,6 @@ export const MusicProvider: React.FC<MusicProviderProps> = ({
     }
   }, [fadeAudio])
 
-  // Musik kembali perlahan setelah video berhenti
   const restoreVolume = useCallback(() => {
     const audio = audioRef.current
 
@@ -126,32 +123,34 @@ export const MusicProvider: React.FC<MusicProviderProps> = ({
     const audio = audioRef.current
     if (!audio) return
 
+    audio.pause()
+    audio.src = songSrc
+    audio.load()
+
     audio.volume = volumeRef.current
     audio.muted = isMuted
     duckCountRef.current = 0
+
+    setIsPlaying(false)
     setUnavailable(false)
 
     const onPlay = () => setIsPlaying(true)
     const onPause = () => setIsPlaying(false)
-
     const onError = () => {
       setUnavailable(true)
       setIsPlaying(false)
     }
-
     const onReady = () => setUnavailable(false)
 
     audio.addEventListener('play', onPlay)
     audio.addEventListener('pause', onPause)
     audio.addEventListener('error', onError)
-    audio.addEventListener('loadedmetadata', onReady)
     audio.addEventListener('canplay', onReady)
 
     return () => {
       audio.removeEventListener('play', onPlay)
       audio.removeEventListener('pause', onPause)
       audio.removeEventListener('error', onError)
-      audio.removeEventListener('loadedmetadata', onReady)
       audio.removeEventListener('canplay', onReady)
 
       if (fadeFrameRef.current !== null) {
@@ -178,7 +177,7 @@ export const MusicProvider: React.FC<MusicProviderProps> = ({
         unavailable,
       }}
     >
-      <audio ref={audioRef} src={songSrc} preload="auto" loop />
+      <audio ref={audioRef} preload="auto" loop />
       {children}
     </MusicContext.Provider>
   )
