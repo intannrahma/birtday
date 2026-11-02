@@ -1,0 +1,103 @@
+
+> birtday@1.0.0 dev
+> vite
+
+[33m(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vite.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.[39m
+
+  [32m[1mVITE[22m v8.3.4[39m  [2mready in [0m[1m600[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m12.47.09[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [optimizer] bundling dependencies...
+[2m12.47.14[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mdependencies optimized: [33mzustand, zustand/middleware[32m[39m
+[2m13.05.47[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx[22m
+[2m13.05.55[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx[22m
+[2m13.07.35[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx[22m
+[2m13.07.41[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx[22m
+[2m13.07.46[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx[22m
+[2m13.09.52[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx[22m
+[2m13.10.17[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m13.10.39[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m13.10.53[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m13.11.05[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14.10.19[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx, /src/components/BirthdayExperience.tsx, /src/components/OpeningScreen.tsx, /src/components/MusicPlayer.tsx, /src/components/AdminPanel.tsx, /src/chapters/ApologyChapter.tsx, /src/chapters/AppreciationChapter.tsx, /src/chapters/StoryChapter.tsx, /src/chapters/VoiceChapter.tsx, /src/chapters/MemoriesChapter.tsx, /src/chapters/WishesChapter.tsx, /src/chapters/GreetingChapter.tsx, /src/chapters/FinaleChapter.tsx, /src/chapters/MusicChapter.tsx and 3 more[22m
+[2m14.15.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14.18.56[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx, /src/components/BirthdayExperience.tsx, /src/components/OpeningScreen.tsx, /src/components/MusicPlayer.tsx, /src/components/AdminPanel.tsx, /src/chapters/ApologyChapter.tsx, /src/chapters/AppreciationChapter.tsx, /src/chapters/StoryChapter.tsx, /src/chapters/VoiceChapter.tsx, /src/chapters/MemoriesChapter.tsx, /src/chapters/WishesChapter.tsx, /src/chapters/GreetingChapter.tsx, /src/chapters/FinaleChapter.tsx, /src/chapters/MusicChapter.tsx and 3 more[22m
+[2m14.19.35[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx, /src/components/BirthdayExperience.tsx, /src/components/OpeningScreen.tsx, /src/components/MusicPlayer.tsx, /src/components/AdminPanel.tsx, /src/chapters/ApologyChapter.tsx, /src/chapters/AppreciationChapter.tsx, /src/chapters/StoryChapter.tsx, /src/chapters/VoiceChapter.tsx, /src/chapters/MemoriesChapter.tsx, /src/chapters/WishesChapter.tsx, /src/chapters/GreetingChapter.tsx, /src/chapters/FinaleChapter.tsx, /src/chapters/MusicChapter.tsx and 3 more[22m
+[2m14.19.42[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/MemoriesChapter.tsx[22m
+[2m14.19.56[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/MemoriesChapter.tsx[22m
+[2m14.23.24[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14.23.32[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14.29.09[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14.39.32[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m14.39.45[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.04.23[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.04.29[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.19.54[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.20.06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.20.19[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/MemoriesChapter.tsx[22m
+[2m15.26.15[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx, /src/components/BirthdayExperience.tsx, /src/components/OpeningScreen.tsx, /src/components/MusicPlayer.tsx, /src/components/AdminPanel.tsx, /src/chapters/ApologyChapter.tsx, /src/chapters/AppreciationChapter.tsx, /src/chapters/StoryChapter.tsx, /src/chapters/VoiceChapter.tsx, /src/chapters/MemoriesChapter.tsx, /src/chapters/WishesChapter.tsx, /src/chapters/GreetingChapter.tsx, /src/chapters/FinaleChapter.tsx, /src/chapters/MusicChapter.tsx and 3 more[22m
+[2m15.26.34[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx[22m
+[2m15.26.50[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/MemoriesChapter.tsx[22m
+[2m15.26.55[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/MemoriesChapter.tsx[22m
+[2m15.27.47[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/OpeningScreen.tsx[22m
+[2m15.28.06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/AcceptanceChapter.tsx[22m
+[2m15.28.06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/ApologyChapter.tsx[22m
+[2m15.28.06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/AppreciationChapter.tsx[22m
+[2m15.28.06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/FinaleChapter.tsx[22m
+[2m15.28.06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/GreetingChapter.tsx[22m
+[2m15.28.06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/LittleThingsChapter.tsx[22m
+[2m15.28.06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/MemoriesChapter.tsx[22m
+[2m15.28.06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/MusicChapter.tsx[22m
+[2m15.28.06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/StoryChapter.tsx[22m
+[2m15.28.06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/VoiceChapter.tsx[22m
+[2m15.28.06[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/WishesChapter.tsx[22m
+[2m15.28.32[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/FinaleChapter.tsx[22m
+[2m15.28.47[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/WishesChapter.tsx[22m
+[2m15.28.57[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/LittleThingsChapter.tsx[22m
+[2m15.29.09[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/MusicChapter.tsx[22m
+[2m15.29.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/AcceptanceChapter.tsx[22m
+[2m15.29.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/ApologyChapter.tsx[22m
+[2m15.29.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/AppreciationChapter.tsx[22m
+[2m15.29.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/FinaleChapter.tsx[22m
+[2m15.29.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/GreetingChapter.tsx[22m
+[2m15.29.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/LittleThingsChapter.tsx[22m
+[2m15.29.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/MemoriesChapter.tsx[22m
+[2m15.29.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/MusicChapter.tsx[22m
+[2m15.29.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/StoryChapter.tsx[22m
+[2m15.29.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/VoiceChapter.tsx[22m
+[2m15.29.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/WishesChapter.tsx[22m
+[2m15.30.42[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.30.52[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.31.08[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.31.18[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.31.30[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.31.51[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.33.09[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.33.22[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.33.27[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.33.36[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.40.20[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/GreetingChapter.tsx[22m
+[2m15.45.08[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx, /src/components/BirthdayExperience.tsx, /src/components/OpeningScreen.tsx, /src/components/MusicPlayer.tsx, /src/components/AdminPanel.tsx, /src/chapters/ApologyChapter.tsx, /src/chapters/AppreciationChapter.tsx, /src/chapters/StoryChapter.tsx, /src/chapters/VoiceChapter.tsx, /src/chapters/MemoriesChapter.tsx, /src/chapters/WishesChapter.tsx, /src/chapters/GreetingChapter.tsx, /src/chapters/FinaleChapter.tsx, /src/chapters/MusicChapter.tsx and 3 more[22m
+[2m15.45.39[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/ChapterNavigation.tsx, /src/components/BirthdayExperience.tsx, /src/components/OpeningScreen.tsx, /src/components/MusicPlayer.tsx, /src/components/AdminPanel.tsx, /src/chapters/ApologyChapter.tsx, /src/chapters/AppreciationChapter.tsx, /src/chapters/StoryChapter.tsx, /src/chapters/VoiceChapter.tsx, /src/chapters/MemoriesChapter.tsx, /src/chapters/WishesChapter.tsx, /src/chapters/GreetingChapter.tsx, /src/chapters/FinaleChapter.tsx, /src/chapters/MusicChapter.tsx and 3 more[22m
+[2m15.45.39[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/AdminPanel.tsx[22m
+[2m15.45.43[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/contexts/MusicContext.tsx[22m
+[2m15.45.43[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/contexts/MusicContext.tsx[22m Could not Fast Refresh ("useMusic" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m15.45.43[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/BirthdayExperience.tsx, /src/components/OpeningScreen.tsx, /src/components/MusicPlayer.tsx, /src/chapters/MusicChapter.tsx, /src/components/VoiceMessagePlayer.tsx[22m
+[2m15.45.45[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/contexts/MusicContext.tsx[22m
+[2m15.45.45[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/contexts/MusicContext.tsx[22m Could not Fast Refresh ("useMusic" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m15.45.45[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/BirthdayExperience.tsx, /src/components/OpeningScreen.tsx, /src/components/MusicPlayer.tsx, /src/chapters/MusicChapter.tsx, /src/components/VoiceMessagePlayer.tsx[22m
+[2m15.45.47[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/contexts/MusicContext.tsx[22m
+[2m15.45.47[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [33mhmr invalidate [39m[2m/src/contexts/MusicContext.tsx[22m Could not Fast Refresh ("useMusic" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+[2m15.45.47[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/BirthdayExperience.tsx, /src/components/OpeningScreen.tsx, /src/components/MusicPlayer.tsx, /src/chapters/MusicChapter.tsx, /src/components/VoiceMessagePlayer.tsx[22m
+[2m15.45.52[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/MusicChapter.tsx[22m
+[2m15.45.56[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/chapters/MusicChapter.tsx[22m
+[2m15.45.59[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/MusicPlayer.tsx[22m
+[2m15.46.02[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/MusicPlayer.tsx[22m
+[2m15.46.05[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/components/VoiceMessagePlayer.tsx[22m
+[2m15.46.16[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.46.21[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m15.46.30[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/index.css[22m
